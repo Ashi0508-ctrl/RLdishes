@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    margin: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.card span {
+    display: block;
+    margin: 10px;
+    font-size: 18px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.card button {
+    background: #e84393;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #8f706c;
+}
+
+/* Mobile View - Stack cards one by one */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;   /* 🔥 this is the key */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
